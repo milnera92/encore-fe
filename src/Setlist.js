@@ -18,7 +18,7 @@ const Setlist = () => {
   const setlistId = params.id;
 
   useEffect(() => {
-    fetch(`https://encore-project-backend.onrender.com//setlist/${setlistId}`)
+    fetch(`https://encore-project-backend.onrender.com/setlist/${setlistId}`)
       .then((res) => res.json())
       .then((res) => {
         setSetlistData(res.data);
@@ -39,7 +39,7 @@ const Setlist = () => {
   }, [setlistId]);
 
   const addFavorite = () => {
-    fetch(`https://encore-project-backend.onrender.com//post-favorite`, {
+    fetch(`https://encore-project-backend.onrender.com/post-favorite`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -54,7 +54,7 @@ const Setlist = () => {
   };
 
   useEffect(() => {
-    fetch(`https://encore-project-backend.onrender.com//get-videos/${searchTerm}`)
+    fetch(`https://encore-project-backend.onrender.com/get-videos/${searchTerm}`)
       .then((res) => res.json())
       .then((res) => {
         setVideoData(res.data);

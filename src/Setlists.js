@@ -14,7 +14,7 @@ const Setlists = () => {
   const artistId = params.id;
 
   useEffect(() => {
-    fetch(`https://encore-project-backend.onrender.com//artist/setlists/${artistId}`)
+    fetch(`https://encore-project-backend.onrender.com/artist/setlists/${artistId}`)
       .then((res) => res.json())
       .then((res) => {
         setSetlistsData(res.data);
