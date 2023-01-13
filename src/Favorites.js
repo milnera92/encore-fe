@@ -11,7 +11,7 @@ const Favorites = () => {
   const { user } = useAuth0();
 
   useEffect(() => {
-    fetch(`/get-favorites`)
+    fetch(`https://encore-project-backend.onrender.com//get-favorites`)
       .then((res) => res.json())
       .then((res) => {
         setSetlists(res.data);

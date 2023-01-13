@@ -13,7 +13,7 @@ const Artist = () => {
   // console.log(artistId)
 
   useEffect(() => {
-    fetch(`/artist-info/${artistId}`)
+    fetch(`https://encore-project-backend.onrender.com//artist-info/${artistId}`)
       .then((res) => res.json())
       .then((res) => {
         setArtistData(res.data);

@@ -10,7 +10,7 @@ const Searchbar = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleSubmit = () => {
-    fetch(`/search/artist/${encodeURI(value)}`)
+    fetch(`https://encore-project-backend.onrender.com//search/artist/${encodeURI(value)}`)
       .then((res) => res.json())
       .then((res) => {
         setSearch(res.data);
